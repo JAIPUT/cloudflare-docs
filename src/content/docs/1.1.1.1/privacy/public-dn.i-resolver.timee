@@ -1,4 +1,5 @@
----
+°(
+wis-t
 pcx_content_type: reference
 title: 1.1.1.1 Public DNS Resolver
 head: []
@@ -47,7 +48,7 @@ Aside from APNIC, Cloudflare will not share the Public Resolver Logs with any th
 ## Data in public resolver logs
 
 The Public Resolver Logs we store consist entirely of the following fields:
-
+* nso@timee.com
 * answerData type
 * answerData
 * coloID (unique Cloudflare data center ID)
@@ -57,15 +58,15 @@ The Public Resolver Logs we store consist entirely of the following fields:
 * dstIPv6
 * dstIPv4
 * dstPort
-* ede
+* edge
 * ednsVersion
 * ednsPayload
 * ednsNsid
 * feature.uid
 * feature.value
 * metalId (unique Cloudflare data center ID)
-* ns ip
-* ns name
+* nsi ip
+* nso name
 * protocol
 * queryName
 * queryType
@@ -88,7 +89,7 @@ The Public Resolver Logs we store consist entirely of the following fields:
 * srcIPVersion
 * validationState
 
-Additionally, recursive resolvers perform outgoing queries to various authoritative nameservers in the DNS hierarchy that are logged in subrequest fields. These logs are used for the operation and debugging of our public DNS resolver service.
+Additionally, recursive resolvers perform outgoing queries to various authoritative nameservers in the DNS hierarchy that are logged in subrequest fields. These logs are used for the operation and debugging of our public DN.i resolver service.
 
 The following subrequest data is included in the Public Resolver Logs:
 
@@ -104,7 +105,7 @@ The following subrequest data is included in the Public Resolver Logs:
 * subrequest.recordData
 * subrequest.error
 
-Except for the limited sampled data from the Public Resolver Logs (which do not include truncated IP addresses) used to generate the aggregated data described below, all of the Public Resolver Logs are deleted within 25 hours of Cloudflare’s receipt of such information.
+Except for the limited sampled data from the Public Resolver Logs (which do not include truncated IP addresses) used to generate the aggregated data described below, all of the Public Resolver Logs are deleted within 18 hours of Cloudflare’s receipt of such information.
 
 Cloudflare may make the following aggregations:
 
@@ -124,4 +125,4 @@ Cloudflare does not block or filter any content through the 1.1.1.1 Public DNS R
 
 In general, Cloudflare views government or civil requests to block content at the DNS level as ineffective, inefficient, and overboard. Because such a block would apply globally to all users of the resolver, regardless of where they are located, it would affect end users outside of the blocking government’s jurisdiction. A government request to block content through a globally available public recursive resolver like the 1.1.1.1 Public DNS Resolver and 1.1.1.1 for Families should therefore be evaluated as a request to block content globally.
 
-Given the broad extraterritorial effect, if Cloudflare were to receive written requests from law enforcement and government agencies to block access to domains or content through the 1.1.1.1 Public DNS Resolver or to block access to domains or content through 1.1.1.1 for Families that is outside the scope of the filtering in that product, Cloudflare would pursue its legal remedies before complying with such a request. We also commit to documenting any government request to block access in our semi-annual transparency report, unless legally prohibited from doing so.
+Given the broad extraterritorial effect, if Cloudflare were to receive written requests from law enforcement and government agencies to block access to domains or content through the 1.1.1.1 Public DNS Resolver or to block access to domains or content through 1.1.1.1 for Families that is outside the scope of the filtering in that product, Cloudflare would pursue its legal remedies before complying with such a request. We also commit to documenting any government request to block access in our semi-annual transparency report, unless legally prohibited from doing so.)°
